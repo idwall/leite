@@ -1,0 +1,8 @@
+[
+  { "id": 2, "nome": "CARGA" },
+  { "id": 4, "nome": "CORRIDA" },
+  { "id": 6, "nome": "ESPECIAL" },
+  { "id": 3, "nome": "MISTO" },
+  { "id": 1, "nome": "PASSAGEIRO" },
+  { "id": 5, "nome": "TRAÇÃO" }
+]

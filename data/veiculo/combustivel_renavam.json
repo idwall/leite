@@ -1,0 +1,14 @@
+[
+  {"id": 1, "nome": "ÁLCOOL" },
+  {"id": 9, "nome": "ÁLCOOL / GNC" },
+  {"id": 3, "nome": "DIESEL" },
+  {"id": 10, "nome": "DIESEL / GNC" },
+  {"id": 7, "nome": "ELFONT EX" },
+  {"id": 6, "nome": "ELFONT IN" },
+  {"id": 5, "nome": "GÁS METANO" },
+  {"id": 4, "nome": "GASOGÊNIO" },
+  {"id": 8, "nome": "GASOL / GNC" },
+  {"id": 2, "nome": "GASOLINA" },
+  {"id": 12, "nome": "ÁLCOOL / GASOLINA" },
+  {"id": 13, "nome": "ÁLCOOL / GASOL / GNV" }
+]
