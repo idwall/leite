@@ -11,7 +11,6 @@ IMPORTANTE: Este gerador de dados foi criado para ajudar no processo de teste de
 
 ## PESSOA
 
-
 ### CPF
 
 - `geraDados.pessoa.cpf()`
