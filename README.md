@@ -5,6 +5,8 @@
 [![npm](https://img.shields.io/npm/dt/leite.svg?style=flat)](https://www.npmjs.com/package/leite)
 [![Coverage Status](https://coveralls.io/repos/github/idwall/leite/badge.svg)](https://coveralls.io/github/idwall/leite)
 
+![Leite](/leite.png)
+
 Gerador de dados brasileiros aleatórios.
 
 IMPORTANTE: Este gerador de dados foi criado para ajudar no processo de teste de aplicações. Não representa informações reais e não devem ser utilizado para cadastros reais.
