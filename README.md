@@ -1,4 +1,9 @@
-# gera-dados.js
+# Leite
+
+[![License MIT](https://img.shields.io/npm/l/express.svg)](http://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/idwall/leite.svg?branch=master)](https://travis-ci.org/idwall/leite)
+[![npm](https://img.shields.io/npm/dt/leite.svg?style=flat)](https://www.npmjs.com/package/leite)
+[![Coverage Status](https://coveralls.io/repos/github/idwall/leite/badge.svg)](https://coveralls.io/github/idwall/leite)
 
 Gerador de dados brasileiros aleatórios.
 

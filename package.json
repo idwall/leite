@@ -1,15 +1,28 @@
 {
-  "name": "gera-dados.js",
+  "name": "leite",
   "version": "0.0.1",
   "description": "Gerador de dados brasileiros aleatórios",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --recursive"
+    "test": "mocha test --recursive",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report text-lcov -- -R spec | node ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idwall/leite.git"
   },
   "author": "raphaelgmelo",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idwall/leite/issues"
+  },
+  "homepage": "https://github.com/idwall/leite#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
     "mocha-jshint": "^2.3.1",
     "should": "^11.1.1",
     "underscore": "^1.8.3"
