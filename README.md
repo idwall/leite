@@ -16,211 +16,220 @@ IMPORTANTE: Este gerador de dados foi criado para ajudar no processo de teste de
 
 [Leite.](https://youtu.be/YIxzomXm0EQ?t=18)
 
+## LEITE
+
+```javascript
+
+var Leite = require('leite');
+var leite = new Leite();
+
+```
+
 ## PESSOA
 
 ### CPF
 
-- `geraDados.pessoa.cpf()`
-- `geraDados.pessoa.cpf({formatado: true})`
+- `leite.pessoa.cpf()`
+- `leite.pessoa.cpf({formatado: true})`
 
 Gera um CPF aleatório
 
 ```
-geraDados.pessoa.cpf();
+leite.pessoa.cpf();
 => 52779225718
 ```
 
 Gera um CPF aleatório formatado
 
 ```
-geraDados.pessoa.cpf({formatado: true})`
+leite.pessoa.cpf({formatado: true})`
 => 893.158.068-16
 ```
 
 
 ### RG
 
-- `geraDados.pessoa.rg()`
+- `leite.pessoa.rg()`
 
 Gera um RG aleatório
 
 ```
-geraDados.pessoa.rg();
+leite.pessoa.rg();
 => 28.150.454-1
 ```
 
 
 ### Email
 
-- `geraDados.pessoa.email()`
+- `leite.pessoa.email()`
 
 Gera um email aleatório
 
 ```
-geraDados.pessoa.email();
+leite.pessoa.email();
 => jonassouza@gmail.com
 ```
 
 
 ### Nome de usuário
 
-- `geraDados.pessoa.usuario()`
+- `leite.pessoa.usuario()`
 
 Gera um nome de usuario aleatório
 
 ```
-geraDados.pessoa.usuario();
+leite.pessoa.usuario();
 => hugo_cardoso
 ```
 
 
 ### Idade
 
-- `geraDados.pessoa.idade()`
-- `geraDados.pessoa.idade({min: 1, max: 20})`
+- `leite.pessoa.idade()`
+- `leite.pessoa.idade({min: 1, max: 20})`
 
 Gera uma idade aleatória
 
 ```
-geraDados.pessoa.idade();
+leite.pessoa.idade();
 => 28
 ```
 
 Gera uma idade aleatória entre 18 e 28
 
 ```
-geraDados.pessoa.idade({min: 18, max: 28});
+leite.pessoa.idade({min: 18, max: 28});
 => 24
 ```
 
 ### Data de nascimento
 
-- `geraDados.pessoa.nascimento()`
-- `geraDados.pessoa.nascimento({string: true})`
-- `geraDados.pessoa.nascimento({formato: "DD/MM/YYYY"})`
-- `geraDados.pessoa.nascimento({idade: 10})`
+- `leite.pessoa.nascimento()`
+- `leite.pessoa.nascimento({string: true})`
+- `leite.pessoa.nascimento({formato: "DD/MM/YYYY"})`
+- `leite.pessoa.nascimento({idade: 10})`
 
 
 Gera uma data de nascimento
 
 ```
-geraDados.pessoa.nascimento();
+leite.pessoa.nascimento();
 => Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
 ```
 
 Gera uma data de nascimento como string
 
 ```
-geraDados.pessoa.nascimento({string: true});
+leite.pessoa.nascimento({string: true});
 => 28/06/1949
 ```
 
 Gera uma data de nascimento no formato especificado
 
 ```
-geraDados.pessoa.nascimento({formato: "MMMM Do YYYY, h:mm:ss a"});
+leite.pessoa.nascimento({formato: "MMMM Do YYYY, h:mm:ss a"});
 => December 2nd 2016, 6:52:45 pm
 ```
 
 Gera uma data de nascimento na idade especificada
 
 ```
-geraDados.pessoa.nascimento({idade: 20});
+leite.pessoa.nascimento({idade: 20});
 => Sat Apr 05 1996 18:48:41 GMT-0700 (PDT)
 ```
 
 ### Sexo
 
-- `geraDados.pessoa.sexo()`
+- `leite.pessoa.sexo()`
 
 Gera um sexo aleatório
 
 ```
-geraDados.pessoa.sexo();
+leite.pessoa.sexo();
 => Masculino
 ```
 
 
 ### Nome
 
-- `geraDados.pessoa.nome()`
-- `geraDados.pessoa.nome({nome_do_meio: true})`
-- `geraDados.pessoa.nome({nome_do_meio_abreviado: true})`
-- `geraDados.pessoa.nome({sexo: "Masculino"})`
+- `leite.pessoa.nome()`
+- `leite.pessoa.nome({nome_do_meio: true})`
+- `leite.pessoa.nome({nome_do_meio_abreviado: true})`
+- `leite.pessoa.nome({sexo: "Masculino"})`
 
 Gera um nome aleatório
 
 ```
-geraDados.pessoa.nome();
+leite.pessoa.nome();
 => Gustavo Melo
 ```
 
 Gera um nome aleatório com o nome do meio
 
 ```
-geraDados.pessoa.nome({nome_do_meio: true});
+leite.pessoa.nome({nome_do_meio: true});
 => Ana Maria de Carvalho
 ```
 
 Gera um nome aleatório com o nome do meio abreviado
 
 ```
-geraDados.pessoa.nome({nome_do_meio_abreviado: true});
+leite.pessoa.nome({nome_do_meio_abreviado: true});
 => Paulo C Fernandes
 ```
 
 Gera um nome aleatório do sexo Feminino
 
 ```
-geraDados.pessoa.nome({sexo: "Feminino"});
+leite.pessoa.nome({sexo: "Feminino"});
 => Mariana Silva
 ```
 
 
 ### Primeiro nome
 
-- `geraDados.pessoa.primeiro_nome()`
-- `geraDados.pessoa.primeiro_nome({nome_do_meio: true})`
-- `geraDados.pessoa.primeiro_nome({nome_do_meio_abreviado: true})`
-- `geraDados.pessoa.primeiro_nome({sexo: "Masculino"})`
+- `leite.pessoa.primeiro_nome()`
+- `leite.pessoa.primeiro_nome({nome_do_meio: true})`
+- `leite.pessoa.primeiro_nome({nome_do_meio_abreviado: true})`
+- `leite.pessoa.primeiro_nome({sexo: "Masculino"})`
 
 Gera um primeiro nome aleatório
 
 ```
-geraDados.pessoa.primeiro_nome();
+leite.pessoa.primeiro_nome();
 => Pereira
 ```
 
 Gera um primeiro nome aleatório com o nome do meio
 
 ```
-geraDados.pessoa.primeiro_nome({nome_do_meio: true});
+leite.pessoa.primeiro_nome({nome_do_meio: true});
 => Ana Maria
 ```
 
 Gera um primeiro nome aleatório com o nome do meio abreviado
 
 ```
-geraDados.pessoa.primeiro_nome({nome_do_meio_abreviado: true});
+leite.pessoa.primeiro_nome({nome_do_meio_abreviado: true});
 => Paulo C
 ```
 
 Gera um primeiro nome do sexo Feminino
 
 ```
-geraDados.pessoa.primeiro_nome({sexo: "Feminino"});
+leite.pessoa.primeiro_nome({sexo: "Feminino"});
 => Mariana
 ```
 
 
 ### Sobrenome
 
-- `geraDados.pessoa.sobrenome()`
+- `leite.pessoa.sobrenome()`
 
 Gera um sobrenome aleatório
 
 ```
-geraDados.pessoa.sobrenome();
+leite.pessoa.sobrenome();
 => Pereira
 ```
 
@@ -229,75 +238,75 @@ geraDados.pessoa.sobrenome();
 
 ### Logradouro
 
-- `geraDados.localizacao.logradouro()`
+- `leite.localizacao.logradouro()`
 
 Gera um logradouro aleatório
 
 ```
-geraDados.localizacao.logradouro();
+leite.localizacao.logradouro();
 => Avenida Brigadeiro Luís Antônio
 ```
 
 ### Complemento
 
-- `geraDados.localizacao.complemento()`
+- `leite.localizacao.complemento()`
 
 Gera um complemento aleatório
 
 ```
-geraDados.localizacao.complemento();
+leite.localizacao.complemento();
 => Apartamento 405
 ```
 
 ### Bairro
 
-- `geraDados.localizacao.bairro()`
+- `leite.localizacao.bairro()`
 
 Gera um bairro aleatório
 
 ```
-geraDados.localizacao.bairro();
+leite.localizacao.bairro();
 => Grajaú
 ```
 
 ### CEP
 
-- `geraDados.localizacao.cep()`
-- `geraDados.localizacao.cep({formatado: true})`
+- `leite.localizacao.cep()`
+- `leite.localizacao.cep({formatado: true})`
 
 Gera um cep aleatório
 
 ```
-geraDados.localizacao.cep();
+leite.localizacao.cep();
 => 13270000
 ```
 
 Gera um cep aleatório formatado
 
 ```
-geraDados.localizacao.cep({formatado: true});
+leite.localizacao.cep({formatado: true});
 => 18268-010
 ```
 
 ### Cidade
 
-- `geraDados.localizacao.cidade()`
+- `leite.localizacao.cidade()`
 
 Gera uma cidade aleatória
 
 ```
-geraDados.localizacao.cidade();
+leite.localizacao.cidade();
 => São Paulo
 ```
 
 ### Estado
 
-- `geraDados.localizacao.estado()`
+- `leite.localizacao.estado()`
 
 Gera um estado aleatório
 
 ```
-geraDados.localizacao.estado();
+leite.localizacao.estado();
 => MG
 ```
 
@@ -305,100 +314,100 @@ geraDados.localizacao.estado();
 
 ### Carroceria
 
-- `geraDados.veiculo.carroceria()`
+- `leite.veiculo.carroceria()`
 
 Retorna uma carroceria de veículo
 
 ```
-geraDados.veiculo.carroceria();
+leite.veiculo.carroceria();
 => FURGÃO
 ```
 
 ### Combustível
 
-- `geraDados.veiculo.combustivel()`
+- `leite.veiculo.combustivel()`
 
 Retorna um combustível de veículo
 
 ```
-geraDados.veiculo.combustivel();
+leite.veiculo.combustivel();
 => GASOLINA
 ```
 
 ### Placa
 
-- `geraDados.veiculo.placa()`
+- `leite.veiculo.placa()`
 
 Gera uma placa de veículo
 
 ```
-geraDados.veiculo.placa();
+leite.veiculo.placa();
 => HJU7829
 ```
 
 ### Categoria
 
-- `geraDados.veiculo.categoria()`
+- `leite.veiculo.categoria()`
 
 Retorna uma categoria de veículo
 
 ```
-geraDados.veiculo.categoria();
+leite.veiculo.categoria();
 => PARTICULAR
 ```
 
 ### Espécie
 
-- `geraDados.veiculo.especie()`
+- `leite.veiculo.especie()`
 
 Retorna uma espécie de veículo
 
 ```
-geraDados.veiculo.especie();
+leite.veiculo.especie();
 => CORRIDA
 ```
 
 ### Marca
 
-- `geraDados.veiculo.marca()`
+- `leite.veiculo.marca()`
 
 Retorna uma marca de veículo
 
 ```
-geraDados.veiculo.marca();
+leite.veiculo.marca();
 => Chevrolet
 ```
 
 ### Modelo
 
-- `geraDados.veiculo.modelo()`
+- `leite.veiculo.modelo()`
 
 Retorna um modelo de veículo
 
 ```
-geraDados.veiculo.modelo();
+leite.veiculo.modelo();
 => 100 2.8 V6 Avant
 ```
 
 ### Restrição
 
-- `geraDados.veiculo.restricao()`
+- `leite.veiculo.restricao()`
 
 Retorna uma restrição de veículo
 
 ```
-geraDados.veiculo.restricao();
+leite.veiculo.restricao();
 => ALIENAÇÃO FIDUCIÁRIA
 ```
 
 ### Tipo
 
-- `geraDados.veiculo.tipo()`
+- `leite.veiculo.tipo()`
 
 Retorna um tipo de veículo
 
 ```
-geraDados.veiculo.tipo();
+leite.veiculo.tipo();
 => MICROÔNIBUS
 ```
 
@@ -406,20 +415,20 @@ geraDados.veiculo.tipo();
 
 ### Cnpj
 
-- `geraDados.empresa.cnpj()`
-- `geraDados.empresa.cnpj({formatado: false})`
+- `leite.empresa.cnpj()`
+- `leite.empresa.cnpj({formatado: false})`
 
 Gera um CNPJ aleatório
 
 ```
-geraDados.empresa.cnpj();
+leite.empresa.cnpj();
 => 56655075000165
 ```
 
 Gera um CNPJ aleatório formatado
 
 ```
-geraDados.empresa.cnpj({formatado: true})`
+leite.empresa.cnpj({formatado: true})`
 => 47.846.698/0001-24
 ```
 
@@ -427,68 +436,68 @@ geraDados.empresa.cnpj({formatado: true})`
 
 ### Número
 
-- `geraDados.cnh_numero()`
+- `leite.cnh_numero()`
 
 Gera um número de CNH aleatório
 
 ```
-geraDados.cnh_numero();
+leite.cnh_numero();
 => 649980822379
 ```
 
 ### Categoria
 
-- `geraDados.cnh_categoria()`
+- `leite.cnh_categoria()`
 
 Retorna uma categoria de CNH
 
 ```
-geraDados.cnh_categoria();
-=>
+leite.cnh_categoria();
+=> 'AB'
 ```
 
 ### Data de emissão
 
-- `geraDados.cnh_emissao()`
+- `leite.cnh_emissao()`
 
 Retorna uma data de emissão de CNH
 
 ```
-geraDados.cnh_emissao();
-=>
+leite.cnh_emissao();
+=> Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
 ```
 
 ### Data de validade
 
-- `geraDados.cnh_validade()`
+- `leite.cnh_validade()`
 
 Gera uma data de validade de CNH
 
 ```
-geraDados.cnh_validade();
-=>
+leite.cnh_validade();
+=> Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
 ```
 
 ### Número de registro
 
-- `geraDados.cnh_registro()`
+- `leite.cnh_registro()`
 
 Gera um número de registro de CNH
 
 ```
-geraDados.cnh_registro();
-=>
+leite.cnh_registro();
+=> 82739462781
 ```
 
 ### Número de segurança
 
-- `geraDados.cnh_seguranca()`
+- `leite.cnh_seguranca()`
 
 Gera um número de segurança de CNH
 
 ```
-geraDados.cnh_seguranca();
-=>
+leite.cnh_seguranca();
+=> 27638945631
 ```
 
 ------------------------
