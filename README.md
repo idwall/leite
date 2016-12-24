@@ -436,67 +436,67 @@ leite.empresa.cnpj({formatado: true})`
 
 ### Número
 
-- `leite.cnh_numero()`
+- `leite.cnh.numero()`
 
 Gera um número de CNH aleatório
 
 ```
-leite.cnh_numero();
+leite.cnh.numero();
 => 649980822379
 ```
 
 ### Categoria
 
-- `leite.cnh_categoria()`
+- `leite.cnh.categoria()`
 
 Retorna uma categoria de CNH
 
 ```
-leite.cnh_categoria();
+leite.cnh.categoria();
 => 'AB'
 ```
 
 ### Data de emissão
 
-- `leite.cnh_emissao()`
+- `leite.cnh.emissao()`
 
 Retorna uma data de emissão de CNH
 
 ```
-leite.cnh_emissao();
+leite.cnh.emissao();
 => Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
 ```
 
 ### Data de validade
 
-- `leite.cnh_validade()`
+- `leite.cnh.validade()`
 
 Gera uma data de validade de CNH
 
 ```
-leite.cnh_validade();
+leite.cnh.validade();
 => Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
 ```
 
 ### Número de registro
 
-- `leite.cnh_registro()`
+- `leite.cnh.registro()`
 
 Gera um número de registro de CNH
 
 ```
-leite.cnh_registro();
+leite.cnh.registro();
 => 82739462781
 ```
 
 ### Número de segurança
 
-- `leite.cnh_seguranca()`
+- `leite.cnh.seguranca()`
 
 Gera um número de segurança de CNH
 
 ```
-leite.cnh_seguranca();
+leite.cnh.seguranca();
 => 27638945631
 ```
 
