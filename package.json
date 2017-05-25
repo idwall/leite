@@ -4,7 +4,7 @@
   "description": "Gerador de dados brasileiros aleatórios",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --recursive",
+    "test": "xo && mocha test --recursive && ava",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report text-lcov -- -R spec | node ./node_modules/coveralls/bin/coveralls.js"
   },
@@ -19,15 +19,19 @@
   },
   "homepage": "https://github.com/idwall/leite#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.15",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "mocha-jshint": "^2.3.1",
-    "should": "^11.1.1",
-    "underscore": "^1.8.3"
+    "ava": "^0.19.1",
+    "underscore": "^1.8.3",
+    "xo": "^0.18.2"
   },
   "dependencies": {
     "moment": "^2.17.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": true,
+    "esnext": true,
+    "rules": {
+      "no-mixed-operators": 0
+    }
   }
 }
