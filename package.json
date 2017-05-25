@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "test": "xo && ava -v",
+    "test": "xo",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report text-lcov -- -R spec | node ./node_modules/coveralls/bin/coveralls.js"
   },
