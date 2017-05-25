@@ -1,0 +1,13 @@
+[
+  { "id": 101, "nome": "AMBULÂNCIA" },
+  { "id": 102, "nome": "BASCULANTE" },
+  { "id": 103, "nome": "BLINDADA" },
+  { "id": 105, "nome": "BUGGY" },
+  { "id": 108, "nome": "C. FECHADA" },
+  { "id": 106, "nome": "CAB. DUPLA" },
+  { "id": 107, "nome": "CAB. ABERTA" },
+  { "id": 110, "nome": "CONVERSÍVEL" },
+  { "id": 112, "nome": "FURGÃO" },
+  { "id": 113, "nome": "JIPE" },
+  { "id": 122, "nome": "TRAILER" }
+]
