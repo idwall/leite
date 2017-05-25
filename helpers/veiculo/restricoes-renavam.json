@@ -1,0 +1,8 @@
+[
+  { "id": 3, "nome": "ALIENAÇÃO FIDUCIÁRIA" },
+  { "id": 1, "nome": "ARRENDAMENTO" },
+  { "id": 2, "nome": "RESERVA DE DOMÍNIO" },
+  { "id": 4, "nome": "RESTRIÇÃO JUDICIAL" },
+  { "id": 7, "nome": "RESTRIÇÃO POR BENEF. TRIBUTÁRIO" },
+  { "id": 6, "nome": "RESTRIÇÃO POR ROUBO OU FURTO" }
+]
