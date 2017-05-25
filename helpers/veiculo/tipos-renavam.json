@@ -1,0 +1,16 @@
+[
+  { "id": 6, "nome": "AUTOMÓVEL" },
+  { "id": 14, "nome": "CAMINHÃO" },
+  { "id": 13, "nome": "CAMINHONETA" },
+  { "id": 24, "nome": "CARGA / CAM" },
+  { "id": 2, "nome": "CICLOMOTO" },
+  { "id": 22, "nome": "ESP / ÔNIBUS" },
+  { "id": 7, "nome": "MICROÔNIBUS" },
+  { "id": 23, "nome": "MISTO / CAM" },
+  { "id": 4, "nome": "MOTOCICLO" },
+  { "id": 3, "nome": "MOTONETA" },
+  { "id": 8, "nome": "ÔNIBUS" },
+  { "id": 10, "nome": "REBOQUE" },
+  { "id": 5, "nome": "TRICICLO" },
+  { "id": 17, "nome": "C. TRATOR" }
+]
