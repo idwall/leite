@@ -503,8 +503,6 @@ leite.cnh.seguranca();
 ------------------------
 
 ## TO-DO
-- Otimizar código
-- Versão browser
 - Gerar CEP válido baseado no estado
 - Gerar RG com padrão do estado
 - Gerador de Empresas
