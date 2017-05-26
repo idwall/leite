@@ -1,523 +1,521 @@
-# Leite
+  # Leite
 
-[![License MIT](https://img.shields.io/npm/l/express.svg)](http://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/idwall/leite.svg?branch=master)](https://travis-ci.org/idwall/leite)
-[![npm](https://img.shields.io/npm/dt/leite.svg?style=flat)](https://www.npmjs.com/package/leite)
-[![Coverage Status](https://coveralls.io/repos/github/idwall/leite/badge.svg)](https://coveralls.io/github/idwall/leite)
+  [![License MIT](https://img.shields.io/npm/l/express.svg)](http://opensource.org/licenses/MIT)
+  [![Build Status](https://travis-ci.org/idwall/leite.svg?branch=master)](https://travis-ci.org/idwall/leite)
+  [![npm](https://img.shields.io/npm/dt/leite.svg?style=flat)](https://www.npmjs.com/package/leite)
+  [![Coverage Status](https://coveralls.io/repos/github/idwall/leite/badge.svg)](https://coveralls.io/github/idwall/leite)
 
-![Leite](/leite.png)
+  ![Leite](/leite.png)
 
-Gerador de dados brasileiros aleatórios.
+  Gerador de dados brasileiros aleatórios.
 
-IMPORTANTE: Este gerador de dados foi criado para ajudar no processo de teste de aplicações. Não representa informações reais e não devem ser utilizado para cadastros reais.
+  **IMPORTANTE**: Este gerador de dados foi criado para ajudar no processo de teste de aplicações. Não representa informações reais e não devem ser utilizado para cadastros reais.
 
-**Mas por que leite?**
+  **Mas por que leite?**
 
-[Leite.](https://youtu.be/YIxzomXm0EQ?t=18)
+  [Leite.](https://youtu.be/YIxzomXm0EQ?t=18)
 
-## LEITE
+  ## LEITE
 
-```javascript
+  ```javascript
+  const Leite = require('leite')
+  const leite = new Leite()
+  ```
 
-var Leite = require('leite');
-var leite = new Leite();
+  ## DEMO
 
-```
+  [Leite empolgante](https://leite-empolgante.now.sh/) (WIP)
 
-## DEMO
+  ## PESSOA
 
-[Leite empolgante](https://leite-empolgante.now.sh/) (WIP)
+  ### CPF
 
-## PESSOA
+  - `leite.pessoa.cpf()`
+  - `leite.pessoa.cpf({ formatado: true })`
 
-### CPF
+  Gera um CPF aleatório
 
-- `leite.pessoa.cpf()`
-- `leite.pessoa.cpf({formatado: true})`
+  ```javascript
+  leite.pessoa.cpf()
+  // => 52779225718
+  ```
 
-Gera um CPF aleatório
+  Gera um CPF aleatório formatado
 
-```
-leite.pessoa.cpf();
-=> 52779225718
-```
+  ```javascript
+  leite.pessoa.cpf({ formatado: true })
+  // => 893.158.068-16
+  ```
 
-Gera um CPF aleatório formatado
 
-```
-leite.pessoa.cpf({formatado: true})`
-=> 893.158.068-16
-```
+  ### RG
 
+  - `leite.pessoa.rg()`
 
-### RG
+  Gera um RG aleatório
 
-- `leite.pessoa.rg()`
+  ```javascript
+  leite.pessoa.rg()
+  // => 28.150.454-1
+  ```
 
-Gera um RG aleatório
 
-```
-leite.pessoa.rg();
-=> 28.150.454-1
-```
+  ### Email
 
+  - `leite.pessoa.email()`
 
-### Email
+  Gera um email aleatório
 
-- `leite.pessoa.email()`
+  ```javascript
+  leite.pessoa.email()
+  // => jonassouza@gmail.com
+  ```
 
-Gera um email aleatório
 
-```
-leite.pessoa.email();
-=> jonassouza@gmail.com
-```
+  ### Nome de usuário
 
+  - `leite.pessoa.usuario()`
 
-### Nome de usuário
+  Gera um nome de usuario aleatório
 
-- `leite.pessoa.usuario()`
+  ```javascript
+  leite.pessoa.usuario()
+  // => hugo_cardoso
+  ```
 
-Gera um nome de usuario aleatório
 
-```
-leite.pessoa.usuario();
-=> hugo_cardoso
-```
+  ### Idade
 
+  - `leite.pessoa.idade()`
+  - `leite.pessoa.idade({ min: 1, max: 20 })`
 
-### Idade
+  Gera uma idade aleatória
 
-- `leite.pessoa.idade()`
-- `leite.pessoa.idade({min: 1, max: 20})`
+  ```javascript
+  leite.pessoa.idade()
+  // => 28
+  ```
 
-Gera uma idade aleatória
+  Gera uma idade aleatória entre 18 e 28
 
-```
-leite.pessoa.idade();
-=> 28
-```
+  ```javascript
+  leite.pessoa.idade({ min: 18, max: 28 })
+  // => 24
+  ```
 
-Gera uma idade aleatória entre 18 e 28
+  ### Data de nascimento
 
-```
-leite.pessoa.idade({min: 18, max: 28});
-=> 24
-```
+  - `leite.pessoa.nascimento()`
+  - `leite.pessoa.nascimento({ string: true })`
+  - `leite.pessoa.nascimento({ formato: 'DD/MM/YYYY' })`
+  - `leite.pessoa.nascimento({ idade: 10 })`
 
-### Data de nascimento
 
-- `leite.pessoa.nascimento()`
-- `leite.pessoa.nascimento({string: true})`
-- `leite.pessoa.nascimento({formato: "DD/MM/YYYY"})`
-- `leite.pessoa.nascimento({idade: 10})`
+  Gera uma data de nascimento
 
+  ```javascript
+  leite.pessoa.nascimento()
+  // => Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
+  ```
 
-Gera uma data de nascimento
+  Gera uma data de nascimento como string
 
-```
-leite.pessoa.nascimento();
-=> Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
-```
+  ```javascript
+  leite.pessoa.nascimento({ string: true })
+  // => 28/06/1949
+  ```
 
-Gera uma data de nascimento como string
+  Gera uma data de nascimento no formato especificado
 
-```
-leite.pessoa.nascimento({string: true});
-=> 28/06/1949
-```
+  ```javascript
+  leite.pessoa.nascimento({ formato: 'MMMM Do YYYY, h:mm:ss a' })
+  // => December 2nd 2016, 6:52:45 pm
+  ```
 
-Gera uma data de nascimento no formato especificado
+  Gera uma data de nascimento na idade especificada
 
-```
-leite.pessoa.nascimento({formato: "MMMM Do YYYY, h:mm:ss a"});
-=> December 2nd 2016, 6:52:45 pm
-```
+  ```javascript
+  leite.pessoa.nascimento({ idade: 20 })
+  // => Sat Apr 05 1996 18:48:41 GMT-0700 (PDT)
+  ```
 
-Gera uma data de nascimento na idade especificada
+  ### Sexo
 
-```
-leite.pessoa.nascimento({idade: 20});
-=> Sat Apr 05 1996 18:48:41 GMT-0700 (PDT)
-```
+  - `leite.pessoa.sexo()`
 
-### Sexo
+  Gera um sexo aleatório
 
-- `leite.pessoa.sexo()`
+  ```javascript
+  leite.pessoa.sexo()
+  // => Masculino
+  ```
 
-Gera um sexo aleatório
 
-```
-leite.pessoa.sexo();
-=> Masculino
-```
+  ### Nome
 
+  - `leite.pessoa.nome()`
+  - `leite.pessoa.nome({ nomeDoMeio: true })`
+  - `leite.pessoa.nome({ nomeDoMeioAbreviado: true })`
+  - `leite.pessoa.nome({ sexo: 'Masculino' })`
 
-### Nome
+  Gera um nome aleatório
 
-- `leite.pessoa.nome()`
-- `leite.pessoa.nome({nome_do_meio: true})`
-- `leite.pessoa.nome({nome_do_meio_abreviado: true})`
-- `leite.pessoa.nome({sexo: "Masculino"})`
+  ```javascript
+  leite.pessoa.nome()
+  // => Gustavo Melo
+  ```
 
-Gera um nome aleatório
+  Gera um nome aleatório com o nome do meio
 
-```
-leite.pessoa.nome();
-=> Gustavo Melo
-```
+  ```javascript
+  leite.pessoa.nome({ nomeDoMeio: true })
+  // => Ana Maria de Carvalho
+  ```
 
-Gera um nome aleatório com o nome do meio
+  Gera um nome aleatório com o nome do meio abreviado
 
-```
-leite.pessoa.nome({nome_do_meio: true});
-=> Ana Maria de Carvalho
-```
+  ```javascript
+  leite.pessoa.nome({ nomeDoMeioAbreviado: true })
+  // => Paulo C Fernandes
+  ```
 
-Gera um nome aleatório com o nome do meio abreviado
+  Gera um nome aleatório do sexo Feminino
 
-```
-leite.pessoa.nome({nome_do_meio_abreviado: true});
-=> Paulo C Fernandes
-```
+  ```javascript
+  leite.pessoa.nome({ sexo: 'Feminino' })
+  // => Mariana Silva
+  ```
 
-Gera um nome aleatório do sexo Feminino
 
-```
-leite.pessoa.nome({sexo: "Feminino"});
-=> Mariana Silva
-```
+  ### Primeiro nome
 
+  - `leite.pessoa.primeiroNome()`
+  - `leite.pessoa.primeiroNome({ nomeDoMeio: true })`
+  - `leite.pessoa.primeiroNome({ nomeDoMeioAbreviado: true })`
+  - `leite.pessoa.primeiroNome({ sexo: 'Masculino' })`
 
-### Primeiro nome
+  Gera um primeiro nome aleatório
 
-- `leite.pessoa.primeiro_nome()`
-- `leite.pessoa.primeiro_nome({nome_do_meio: true})`
-- `leite.pessoa.primeiro_nome({nome_do_meio_abreviado: true})`
-- `leite.pessoa.primeiro_nome({sexo: "Masculino"})`
+  ```javascript
+  leite.pessoa.primeiroNome()
+  // => Pereira
+  ```
 
-Gera um primeiro nome aleatório
+  Gera um primeiro nome aleatório com o nome do meio
 
-```
-leite.pessoa.primeiro_nome();
-=> Pereira
-```
+  ```javascript
+  leite.pessoa.primeiroNome({ nomeDoMeio: true })
+  // => Ana Maria
+  ```
 
-Gera um primeiro nome aleatório com o nome do meio
+  Gera um primeiro nome aleatório com o nome do meio abreviado
 
-```
-leite.pessoa.primeiro_nome({nome_do_meio: true});
-=> Ana Maria
-```
+  ```javascript
+  leite.pessoa.primeiroNome({ nomeDoMeioAbreviado: true })
+  // => Paulo C
+  ```
 
-Gera um primeiro nome aleatório com o nome do meio abreviado
+  Gera um primeiro nome do sexo Feminino
 
-```
-leite.pessoa.primeiro_nome({nome_do_meio_abreviado: true});
-=> Paulo C
-```
+  ```javascript
+  leite.pessoa.primeiroNome({ sexo: 'Feminino' })
+  // => Mariana
+  ```
 
-Gera um primeiro nome do sexo Feminino
 
-```
-leite.pessoa.primeiro_nome({sexo: "Feminino"});
-=> Mariana
-```
+  ### Sobrenome
 
+  - `leite.pessoa.sobrenome()`
 
-### Sobrenome
+  Gera um sobrenome aleatório
 
-- `leite.pessoa.sobrenome()`
+  ```javascript
+  leite.pessoa.sobrenome()
+  // => Pereira
+  ```
 
-Gera um sobrenome aleatório
 
-```
-leite.pessoa.sobrenome();
-=> Pereira
-```
+  ## LOCALIZAÇÃO
 
+  ### Logradouro
 
-## LOCALIZAÇÃO
+  - `leite.localizacao.logradouro()`
 
-### Logradouro
+  Gera um logradouro aleatório
 
-- `leite.localizacao.logradouro()`
+  ```javascript
+  leite.localizacao.logradouro()
+  // => Avenida Brigadeiro Luís Antônio
+  ```
 
-Gera um logradouro aleatório
+  ### Complemento
 
-```
-leite.localizacao.logradouro();
-=> Avenida Brigadeiro Luís Antônio
-```
+  - `leite.localizacao.complemento()`
 
-### Complemento
+  Gera um complemento aleatório
 
-- `leite.localizacao.complemento()`
+  ```javascript
+  leite.localizacao.complemento()
+  // => Apartamento 405
+  ```
 
-Gera um complemento aleatório
+  ### Bairro
 
-```
-leite.localizacao.complemento();
-=> Apartamento 405
-```
+  - `leite.localizacao.bairro()`
 
-### Bairro
+  Gera um bairro aleatório
 
-- `leite.localizacao.bairro()`
+  ```javascript
+  leite.localizacao.bairro()
+  // => Grajaú
+  ```
 
-Gera um bairro aleatório
+  ### CEP
 
-```
-leite.localizacao.bairro();
-=> Grajaú
-```
+  - `leite.localizacao.cep()`
+  - `leite.localizacao.cep({ formatado: true })`
 
-### CEP
+  Gera um cep aleatório
 
-- `leite.localizacao.cep()`
-- `leite.localizacao.cep({formatado: true})`
+  ```javascript
+  leite.localizacao.cep()
+  // => 13270000
+  ```
 
-Gera um cep aleatório
+  Gera um cep aleatório formatado
 
-```
-leite.localizacao.cep();
-=> 13270000
-```
+  ```javascript
+  leite.localizacao.cep({ formatado: true })
+  // => 18268-010
+  ```
 
-Gera um cep aleatório formatado
+  ### Cidade
 
-```
-leite.localizacao.cep({formatado: true});
-=> 18268-010
-```
+  - `leite.localizacao.cidade()`
 
-### Cidade
+  Gera uma cidade aleatória
 
-- `leite.localizacao.cidade()`
+  ```javascript
+  leite.localizacao.cidade()
+  // => São Paulo
+  ```
 
-Gera uma cidade aleatória
+  ### Estado
 
-```
-leite.localizacao.cidade();
-=> São Paulo
-```
+  - `leite.localizacao.estado()`
 
-### Estado
+  Gera um estado aleatório
 
-- `leite.localizacao.estado()`
+  ```javascript
+  leite.localizacao.estado()
+  // => MG
+  ```
 
-Gera um estado aleatório
+  ## VEÍCULO
 
-```
-leite.localizacao.estado();
-=> MG
-```
+  ### Carroceria
 
-## VEÍCULO
+  - `leite.veiculo.carroceria()`
 
-### Carroceria
+  Retorna uma carroceria de veículo
 
-- `leite.veiculo.carroceria()`
+  ```javascript
+  leite.veiculo.carroceria()
+  // => FURGÃO
+  ```
 
-Retorna uma carroceria de veículo
+  ### Combustível
 
-```
-leite.veiculo.carroceria();
-=> FURGÃO
-```
+  - `leite.veiculo.combustivel()`
 
-### Combustível
+  Retorna um combustível de veículo
 
-- `leite.veiculo.combustivel()`
+  ```javascript
+  leite.veiculo.combustivel()
+  // => GASOLINA
+  ```
 
-Retorna um combustível de veículo
+  ### Placa
 
-```
-leite.veiculo.combustivel();
-=> GASOLINA
-```
+  - `leite.veiculo.placa()`
 
-### Placa
+  Gera uma placa de veículo
 
-- `leite.veiculo.placa()`
+  ```javascript
+  leite.veiculo.placa()
+  // => HJU7829
+  ```
 
-Gera uma placa de veículo
+  ### Categoria
 
-```
-leite.veiculo.placa();
-=> HJU7829
-```
+  - `leite.veiculo.categoria()`
 
-### Categoria
+  Retorna uma categoria de veículo
 
-- `leite.veiculo.categoria()`
+  ```javascript
+  leite.veiculo.categoria()
+  // => PARTICULAR
+  ```
 
-Retorna uma categoria de veículo
+  ### Espécie
 
-```
-leite.veiculo.categoria();
-=> PARTICULAR
-```
+  - `leite.veiculo.especie()`
 
-### Espécie
+  Retorna uma espécie de veículo
 
-- `leite.veiculo.especie()`
+  ```javascript
+  leite.veiculo.especie()
+  // => CORRIDA
+  ```
 
-Retorna uma espécie de veículo
+  ### Marca
 
-```
-leite.veiculo.especie();
-=> CORRIDA
-```
+  - `leite.veiculo.marca()`
 
-### Marca
+  Retorna uma marca de veículo
 
-- `leite.veiculo.marca()`
+  ```javascript
+  leite.veiculo.marca()
+  // => Chevrolet
+  ```
 
-Retorna uma marca de veículo
+  ### Modelo
 
-```
-leite.veiculo.marca();
-=> Chevrolet
-```
+  - `leite.veiculo.modelo()`
 
-### Modelo
+  Retorna um modelo de veículo
 
-- `leite.veiculo.modelo()`
+  ```javascript
+  leite.veiculo.modelo()
+  // => 100 2.8 V6 Avant
+  ```
 
-Retorna um modelo de veículo
+  ### Restrição
 
-```
-leite.veiculo.modelo();
-=> 100 2.8 V6 Avant
-```
+  - `leite.veiculo.restricao()`
 
-### Restrição
+  Retorna uma restrição de veículo
 
-- `leite.veiculo.restricao()`
+  ```javascript
+  leite.veiculo.restricao()
+  // => ALIENAÇÃO FIDUCIÁRIA
+  ```
 
-Retorna uma restrição de veículo
+  ### Tipo
 
-```
-leite.veiculo.restricao();
-=> ALIENAÇÃO FIDUCIÁRIA
-```
+  - `leite.veiculo.tipo()`
 
-### Tipo
+  Retorna um tipo de veículo
 
-- `leite.veiculo.tipo()`
+  ```javascript
+  leite.veiculo.tipo()
+  // => MICROÔNIBUS
+  ```
 
-Retorna um tipo de veículo
+  ## EMPRESA
 
-```
-leite.veiculo.tipo();
-=> MICROÔNIBUS
-```
+  ### Cnpj
 
-## EMPRESA
+  - `leite.empresa.cnpj()`
+  - `leite.empresa.cnpj({ formatado: false })`
 
-### Cnpj
+  Gera um CNPJ aleatório
 
-- `leite.empresa.cnpj()`
-- `leite.empresa.cnpj({formatado: false})`
+  ```javascript
+  leite.empresa.cnpj()
+  // => 56655075000165
+  ```
 
-Gera um CNPJ aleatório
+  Gera um CNPJ aleatório formatado
 
-```
-leite.empresa.cnpj();
-=> 56655075000165
-```
+  ```javascript
+  leite.empresa.cnpj({ formatado: true })
+  // => 47.846.698/0001-24
+  ```
 
-Gera um CNPJ aleatório formatado
+  ## CNH
 
-```
-leite.empresa.cnpj({formatado: true})`
-=> 47.846.698/0001-24
-```
+  ### Número
 
-## CNH
+  - `leite.cnh.numero()`
 
-### Número
+  Gera um número de CNH aleatório
 
-- `leite.cnh.numero()`
+  ```javascript
+  leite.cnh.numero()
+  // => 649980822379
+  ```
 
-Gera um número de CNH aleatório
+  ### Categoria
 
-```
-leite.cnh.numero();
-=> 649980822379
-```
+  - `leite.cnh.categoria()`
 
-### Categoria
+  Retorna uma categoria de CNH
 
-- `leite.cnh.categoria()`
+  ```javascript
+  leite.cnh.categoria()
+  // => 'AB'
+  ```
 
-Retorna uma categoria de CNH
+  ### Data de emissão
 
-```
-leite.cnh.categoria();
-=> 'AB'
-```
+  - `leite.cnh.emissao()`
 
-### Data de emissão
+  Retorna uma data de emissão de CNH
 
-- `leite.cnh.emissao()`
+  ```javascript
+  leite.cnh.emissao()
+  // => Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
+  ```
 
-Retorna uma data de emissão de CNH
+  ### Data de validade
 
-```
-leite.cnh.emissao();
-=> Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
-```
+  - `leite.cnh.validade()`
 
-### Data de validade
+  Gera uma data de validade de CNH
 
-- `leite.cnh.validade()`
+  ```javascript
+  leite.cnh.validade()
+  // => Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
+  ```
 
-Gera uma data de validade de CNH
+  ### Número de registro
 
-```
-leite.cnh.validade();
-=> Sat Apr 05 1947 18:48:41 GMT-0700 (PDT)
-```
+  - `leite.cnh.registro()`
 
-### Número de registro
+  Gera um número de registro de CNH
 
-- `leite.cnh.registro()`
+  ```javascript
+  leite.cnh.registro()
+  // => 82739462781
+  ```
 
-Gera um número de registro de CNH
+  ### Número de segurança
 
-```
-leite.cnh.registro();
-=> 82739462781
-```
+  - `leite.cnh.seguranca()`
 
-### Número de segurança
+  Gera um número de segurança de CNH
 
-- `leite.cnh.seguranca()`
+  ```javascript
+  leite.cnh.seguranca()
+  // => 27638945631
+  ```
 
-Gera um número de segurança de CNH
+  ------------------------
 
-```
-leite.cnh.seguranca();
-=> 27638945631
-```
+  ## TO-DO
+  - Gerar CEP válido baseado no estado
+  - Gerar RG com padrão do estado
+  - Gerador de Empresas
+    - Nome
+    - Nome Fantasia
+    - Inscrição Estadual
+  - PIS/PASEP
 
-------------------------
+  ## Fonte de alguns dos dados mockados
 
-## TO-DO
-- Gerar CEP válido baseado no estado
-- Gerar RG com padrão do estado
-- Gerador de Empresas
-  - Nome
-  - Nome Fantasia
-  - Inscrição Estadual
-- PIS/PASEP
+  API de Consulta Tabela FIPE
+  http://fipeapi.appspot.com/
 
-## Fonte de alguns dos dados mockados
-
-API de Consulta Tabela FIPE
-http://fipeapi.appspot.com/
-
-Perfil Sistemas - TABELA DE CÓDIGOS RENAVAM
-http://perfilsistemas.blogspot.com/2011/01/tabela-de-codigos-renavam.html
+  Perfil Sistemas - TABELA DE CÓDIGOS RENAVAM
+  http://perfilsistemas.blogspot.com/2011/01/tabela-de-codigos-renavam.html
