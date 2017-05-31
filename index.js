@@ -1,63 +1,67 @@
-var lib = require('./lib');
+'use strict'
 
-module.exports = function(){
+const {
+  inteiro,
+  natural,
+  n,
+  cnh,
+  empresa,
+  localizacao,
+  pessoa,
+  veiculo
+} = require('./lib')
 
-  var methods = {};
+module.exports = function () {
+  const methods = {}
 
-  methods.inteiro = lib.inteiro;
-
-  methods.natural = lib.natural;
-
-  methods.n = lib.n;
-
-  methods.empresa = {
-    cnpj : lib.cnpj
-  };
-
+  methods.inteiro = inteiro
+  methods.natural = natural
+  methods.n = n
   methods.cnh = {
-    categoria : lib.cnh.categoria,
-    emissao : lib.cnh.emissao,
-    numero : lib.cnh.numero,
-    registro : lib.cnh.registro,
-    seguranca : lib.cnh.seguranca,
-    validade : lib.cnh.validade,
-  };
-
-  methods.pessoa = {
-    sexo : lib.sexo,
-    rg : lib.rg,
-    cpf : lib.cpf,
-    idade : lib.idade,
-    nome : lib.nome,
-    sobrenome : lib.sobrenome,
-    primeiro_nome : lib.primeiro_nome,
-    nascimento : lib.nascimento,
-    email : lib.email,
-    usuario : lib.usuario,
-  };
-
+    categoria: cnh.categoria,
+    emissao: cnh.emissao,
+    numero: cnh.numero,
+    registro: cnh.registro,
+    seguranca: cnh.seguranca,
+    validade: cnh.validade
+  }
+  methods.empresa = {
+    cnpj: empresa.cnpj
+  }
   methods.localizacao = {
-    logradouro : lib.localizacao.logradouro,
-    bairro : lib.localizacao.bairro,
-    cidade : lib.localizacao.cidade,
-    complemento : lib.localizacao.complemento,
-    estado : lib.localizacao.estado,
-    cep : lib.localizacao.cep,
-  };
-
+    cep: localizacao.cep,
+    estado: localizacao.estado,
+    cidade: localizacao.cidade,
+    bairro: localizacao.bairro,
+    logradouro: localizacao.logradouro,
+    complemento: localizacao.complemento,
+    numero: localizacao.numero
+  }
+  methods.pessoa = {
+    email: pessoa.email,
+    idade: pessoa.idade,
+    nascimento: pessoa.nascimento,
+    nome: pessoa.nome,
+    primeiroNome: pessoa.primeiroNome,
+    rg: pessoa.rg,
+    sexo: pessoa.sexo,
+    sobrenome: pessoa.sobrenome,
+    usuario: pessoa.usuario
+  }
   methods.veiculo = {
-    renavam : lib.renavam,
-    marca : lib.veiculo.marca,
-    modelo : lib.veiculo.modelo,
-    placa : lib.veiculo.placa,
-    tipo : lib.veiculo.tipo,
-    combustivel : lib.veiculo.combustivel,
-    carroceria : lib.veiculo.carroceria,
-    especie : lib.veiculo.especie,
-    restricao : lib.veiculo.restricao,
-    categoria : lib.veiculo.categoria,
-  };
+    ano: veiculo.ano,
+    carroceria: veiculo.carroceria,
+    categoria: veiculo.categoria,
+    combustivel: veiculo.combustivel,
+    cor: veiculo.cor,
+    especie: veiculo.especie,
+    marca: veiculo.marca,
+    modelo: veiculo.modelo,
+    placa: veiculo.placa,
+    restricao: veiculo.restricao,
+    tipo: veiculo.tipo,
+    renavam: veiculo.renavam
+  }
 
-  return methods;
-
-};
+  return methods
+}
