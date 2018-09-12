@@ -44,6 +44,7 @@ module.exports = function () {
     nome: pessoa.nome,
     primeiroNome: pessoa.primeiroNome,
     rg: pessoa.rg,
+    cpf: pessoa.cpf,
     sexo: pessoa.sexo,
     sobrenome: pessoa.sobrenome,
     usuario: pessoa.usuario
