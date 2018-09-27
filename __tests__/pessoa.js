@@ -9,6 +9,20 @@ test.beforeEach(() => {
   leite = new Leite()
 })
 
+test('cpf', t => {
+  const expect = leite.pessoa.cpf()
+
+  t.is(typeof expect, 'string')
+  t.regex(expect, /^\d{11}$/m)
+})
+
+test('cpf formatado', t => {
+  const expect = leite.pessoa.cpf({ formatado: true })
+
+  t.is(typeof expect, 'string')
+  t.regex(expect, /^\d{3}.\d{3}.\d{3}-\d{2}$/m)
+})
+
 test('email', t => {
   const expect = leite.pessoa.email()
   t.is(typeof expect, 'string')
