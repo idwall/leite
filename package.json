@@ -1,6 +1,6 @@
 {
   "name": "leite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Gerador de dados brasileiros aleatórios",
   "main": "index.js",
   "scripts": {
@@ -21,10 +21,10 @@
   "homepage": "https://github.com/idwall/leite#readme",
   "devDependencies": {
     "ava": "^0.19.1",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.2",
     "husky": "^0.13.3",
     "lint-staged": "^3.4.2",
-    "nyc": "^10.3.2",
+    "nyc": "^13.1.0",
     "prettier": "^1.3.1",
     "xo": "^0.18.2"
   },
