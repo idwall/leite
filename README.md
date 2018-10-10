@@ -520,7 +520,6 @@
   ------------------------
 
   ## TO-DO
-  - Gerar CEP válido baseado no estado
   - Gerar RG com padrão do estado
   - Gerador de Empresas
     - Nome
