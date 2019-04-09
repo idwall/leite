@@ -38,3 +38,6 @@ jspm_packages
 
 # macOS files
 **/.DS_Store
+
+# Editors/IDEs folders
+.idea

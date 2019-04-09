@@ -288,6 +288,22 @@
   leite.localizacao.cep({ formatado: true })
   // => 18268-010
   ```
+  
+  Gera um cep aleatório considerando o estado
+  
+    ```javascript
+    leite.localizacao.cep({ estado: 'sp' })
+    // => 18268010
+    
+    leite.localizacao.cep({ estado: 'sp-g' })
+    // => 08268010
+    
+    leite.localizacao.cep({ estado: 'mg' })
+    // => 38268010
+    
+    leite.localizacao.cep({ estado: 'to' })
+    // => 78268-010
+    ```
 
   ### Cidade
 
@@ -504,7 +520,6 @@
   ------------------------
 
   ## TO-DO
-  - Gerar CEP válido baseado no estado
   - Gerar RG com padrão do estado
   - Gerador de Empresas
     - Nome
